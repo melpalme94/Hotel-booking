@@ -1,0 +1,45 @@
+<aside>
+  <header>
+    <a href="#">
+      <h2>Maison Soleil</h2>
+    </a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#your-stay">Your stay</a></li>
+      <li><a href="#the-house">The house</a></li>
+      <li><a href="#around-town">Around town</a></li>
+      <li><a href="#breakfast">Breakfast</a></li>
+      <li><a href="#messages">Messages</a></li>
+    </ul>
+  </nav>
+
+  <aside>
+    <!-- Card de clima: Today in Cassis, 27°, Sunny · light breeze -->
+  </aside>
+
+  <footer>
+    <!-- Est. 1987, endereço, copyright -->
+  </footer>
+</aside>
+
+<main>
+  <header>
+    <p>Booking · Confirmed</p>
+    <h1>Bienvenue, Lucia.</h1>
+    <button>Print receipt</button>
+    <button>Add to calendar</button>
+  </header>
+
+  <section>
+    <article><!-- recibo --></article>
+    <article><!-- nota da anfitriã --></article>
+  </section>
+
+  <ul>
+    <li><!-- Arrival --></li>
+    <li><!-- Wifi --></li>
+    <li><!-- Breakfast --></li>
+  </ul>
+</main>
