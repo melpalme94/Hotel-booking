@@ -7,31 +7,27 @@
   <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Hotel booking confirmation page</title>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 0.6875rem;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Fraunces:ital,wght@0,400;1,400&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
   <!-- Sidebar starts -->
-  <aside>
+  <aside class="sidebar">
 
     <header>
       <a href="#">
         <img src="assets/images/logo.svg" alt="Maison Soleil">
       </a>
-     <button aria-label="Abrir Menu"><img src="assets/images/icon-menu.svg" alt="">
-    </button>
-      
+      <button aria-label="Abrir Menu"><img src="assets/images/icon-menu.svg" alt="">
+      </button>
+
     </header>
 
     <nav>
@@ -46,8 +42,9 @@
     <!-- Local weather -->
     <aside>
       <p>Today in Cassis</p>
-      <span>27°</span> 
-      <img src="assets/images/icon-weather.svg" alt=""> <p>Sunny · light breeze</p>
+      <span>27°</span>
+      <img src="assets/images/icon-weather.svg" alt="">
+      <p>Sunny · light breeze</p>
     </aside>
 
     <footer>
@@ -66,8 +63,8 @@
     </header>
     <!-- Booking cards start -->
     <!-- Receipt card -->
-    <section>
-      <article>
+    <section class="booking-cards">
+      <article class="receipt-card">
         <h2>Receipt</h2>
         <p>
           <abbr title="numero">№</abbr> MS-2026
@@ -102,25 +99,25 @@
         <img src="assets/images/icon-barcode.svg" alt="">
 
       </article>
-
+      <!-- Barcode image -->
+      <!-- Note from host card -->
+      <article class="host-note-card">
+        <h2>Welcome</h2>
+        <p>A note from your host, Margaux.</p>
+        <p>
+          We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending
+          not
+          to
+          notice you.
+        </p>
+        <dl>
+          <dt>
+            Room
+          </dt>
+          <dd>La Garrigue</dd>
+        </dl>
+      </article>
     </section>
-    <!-- Barcode image -->
-    <!-- Note from host card -->
-    <article>
-      <h2>Welcome</h2>
-      <p>A note from your host, Margaux.</p>
-      <p>
-        We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not
-        to
-        notice you.
-      </p>
-      <dl>
-        <dt>
-          Room
-        </dt>
-        <dd>La Garrigue</dd>
-      </dl>
-    </article>
     <!-- Booking cards end -->
     <!-- Guest info row starts -->
     <!-- Arrival -->
@@ -138,7 +135,7 @@
       </li>
       <!-- Wifi -->
       <li>
-  
+
         <p>Wifi</p>
         <img src="assets/images/icon-wifi.svg" alt="">
         <span>02</span>

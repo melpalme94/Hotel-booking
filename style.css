@@ -1,0 +1,68 @@
+body {
+    font-family: var(--font-sans);
+    background-color: var(--neutral-50);
+    color: var(--neutral-900);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.sidebar {
+    display: none;
+
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    /* regras que só se aplicam a partir de 768px */
+
+    body {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+    }
+
+    .booking-cards {
+        position: relative;
+
+    }
+    .receipt-card{
+        position: absolute;
+        width: 350px;
+        top: 0%;
+        left: 25%;
+        outline: 2px solid red;
+
+    }
+
+    .host-note-card{
+        position: absolute;
+        width: 350px;
+        top: 0%;
+        right: 38%;
+        outline: 2px solid blue;
+
+    }
+
+    .attribution {
+        grid-column: 1 / -1;
+
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+}

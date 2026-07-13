@@ -36,28 +36,19 @@
 
   --rose-500: hsl(340, 48%, 52%);
 
-/*
-### Typography
-
-### Body Copy
-
-    -- Font size (paragraph): 14px
-
-### Fonts
-
-  - Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
-    - Weights: 400 (regular and italic)
-  - Family: [DM Sans](https://fonts.google.com/specimen/DM+Sans)
-    - Weights: 400, 500, 600
-  - Family: [DM Mono](https://fonts.google.com/specimen/DM+Mono)
-    - Weights: 400, 500
-
-*/
+/* Fonts */
+  --font-serif: 'Fraunces', serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; 
+  
+}
+
+p {
   font-size: 14px;
 }
