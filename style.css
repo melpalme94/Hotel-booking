@@ -17,6 +17,44 @@ h3 {
 
 }
 
+.receipt-card {
+    position: absolute;
+    width: 350px;
+    top: 0%;
+    left: 25%;
+    background-color: var(--neutral-0);
+    padding: 1.1rem;
+    border-radius: 13px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15); /*deslocamento-horizontal deslocamento-vertical desfoque cor*/
+}
+
+.receipt-number {
+    font-family: var(--font-mono);
+}
+
+.date-value {
+    font-family: var(--font-serif);
+}
+
+.pricing dd {
+  font-family: var(--font-mono);
+}
+
+.pricing dd:last-child {
+  font-family: var(--font-serif);
+}
+.pricing dt:last-of-type {
+  border-top: 2px solid var(--neutral-400);
+  padding-top: 0.5rem; /* espaço entre a linha e o texto */
+}
+
+.payment-status {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    color: var(--neutral-600);
+    font-size: 12px;
+    
+}
 .attribution {
     font-size: 0.6875rem;
     text-align: center;
@@ -43,7 +81,7 @@ h3 {
         width: 350px;
         top: 0%;
         left: 25%;
-        outline: 2px solid red;
+        /*outline: 2px solid red;*/
 
     }
 
@@ -52,7 +90,7 @@ h3 {
         width: 350px;
         top: 0%;
         right: 38%;
-        outline: 2px solid blue;
+        /*outline: 2px solid blue;*/
 
     }
 
