@@ -65,11 +65,13 @@
     <!-- Receipt card -->
     <section class="booking-cards">
       <article class="receipt-card">
-        <h2 class="receipt-label">Receipt</h2>
-        <p class="receipt-number">
-          <abbr title="numero">№</abbr> MS-2026
-          0421-AH
-        </p>
+        <div class="receipt-header">
+          <h2 class="receipt-label">Receipt</h2>
+          <p class="receipt-number">
+            <span class="number-line1"><abbr title="numero">№</abbr> MS-2026</span>
+            <span class="number-line2">0421-AH</span>
+          </p>
+        </div>
         <h3>Your stay</h3>
         <dl class="stay-dates">
           <dt class="receipt-label">Check in</dt>
@@ -95,8 +97,10 @@
           <dd class="receipt-730">€ 730.40</dd>
         </dl>
         
-        <p class="payment-status">Paid · Wise · GBP</p>
-        <img src="assets/images/icon-barcode.svg" alt="">
+        <div class="receipt-footer">
+          <p class="payment-status">Paid · Wise · GBP</p>
+          <img src="assets/images/icon-barcode.svg" alt="">
+        </div>
 
       </article>
       <!-- Barcode image -->
