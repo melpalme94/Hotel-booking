@@ -35,10 +35,7 @@ dt .receipt-label {
 }
 
 .receipt-card {
-    position: absolute;
     width: 350px;
-    top: 0%;
-    left: 25%;
     background-color: var(--neutral-0);
     padding: 1.1rem;
     border-radius: 13px;
@@ -150,8 +147,7 @@ abbr {
     color: var(--neutral-600);
     font-size: 8.5px;
     letter-spacing: 1px;
-    
-    
+
 }
 
 .receipt-footer {
@@ -160,6 +156,35 @@ abbr {
     align-items: flex-end;
     margin-top: 0.8rem;
 }
+
+.host-note-card {
+
+    width: 350px;
+    padding: 1.1rem;
+    border-radius: 13px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(150deg, var(--terracotta-700), var(--terracotta-400));
+    color: var(--neutral-0);
+    
+}
+
+.host-note {
+    font-family: var(--font-serif);
+    font-style:italic;
+    color: var(--sun-200);
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.host-name {
+    display: block;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
 
 
 .attribution {
@@ -193,6 +218,7 @@ abbr {
 
     }
 
+
     .receipt-header {
         display: flex;
         justify-content: space-between;
@@ -202,8 +228,8 @@ abbr {
         position: absolute;
         width: 350px;
         top: 0%;
-        right: 38%;
-        /*outline: 2px solid blue;*/
+        right: 33.5%;
+        z-index: 1;
 
     }
 
