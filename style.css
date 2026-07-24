@@ -23,7 +23,6 @@ h3 {
     color: var(--neutral-600);
     font-size: 10px;
     letter-spacing: 1px;
-
 }
 
 dt .receipt-label {
@@ -158,19 +157,40 @@ abbr {
 }
 
 .host-note-card {
-
     width: 350px;
-    padding: 1.1rem;
+    padding: 2rem;
     border-radius: 13px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
     background: linear-gradient(150deg, var(--terracotta-700), var(--terracotta-400));
     color: var(--neutral-0);
-    
+
+}
+
+.host-note-card::before {
+    content: "";
+    position: absolute;
+    top: 1.1rem;
+    /* ajuste depois */
+    left: 1.1rem;
+    right: 1.1rem;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.6), transparent);
+
+    -webkit-mask-image: repeating-linear-gradient(to right,
+            black 0px,
+            black 4px,
+            transparent 4px,
+            transparent 8px);
+    mask-image: repeating-linear-gradient(to right,
+            black 0px,
+            black 4px,
+            transparent 4px,
+            transparent 8px);
 }
 
 .host-note {
     font-family: var(--font-serif);
-    font-style:italic;
+    font-style: italic;
     color: var(--sun-200);
     font-size: 15px;
     line-height: 1.4;
@@ -183,8 +203,27 @@ abbr {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.4;
+
 }
 
+.welcome-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    color: var(--neutral-200);
+    font-size: 8px;
+    letter-spacing: 1px;
+
+}
+
+.name-note {
+    margin-top: 2rem;
+}
+
+.room-value {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    display: block;
+}
 
 
 .attribution {
@@ -218,7 +257,6 @@ abbr {
 
     }
 
-
     .receipt-header {
         display: flex;
         justify-content: space-between;
@@ -230,7 +268,12 @@ abbr {
         top: 0%;
         right: 33.5%;
         z-index: 1;
+    }
 
+    .host-note-card img {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
 
     .attribution {
