@@ -165,10 +165,9 @@ abbr {
     color: var(--neutral-0);
 }
 
-.host-note-card p {
-    margin-bottom: 1rem;
-}
 
+host-note-card
+>>>>>>> ae082772e55cc61d5dbcf54c3c95a5e67d4b6113
 
 .host-note-card::before {
     content: "";
