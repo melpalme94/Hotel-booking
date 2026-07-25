@@ -158,16 +158,18 @@ abbr {
 
 .host-note-card {
     width: 350px;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 13px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
-    background: linear-gradient(150deg, var(--terracotta-700), var(--terracotta-400));
+    background: linear-gradient(50deg, var(--terracotta-700), var(--terracotta-400));
     color: var(--neutral-0);
+
 }
 
+.notice-note {
+    margin-bottom: 2rem;
 
-host-note-card
->>>>>>> ae082772e55cc61d5dbcf54c3c95a5e67d4b6113
+}
 
 .host-note-card::before {
     content: "";
@@ -191,12 +193,14 @@ host-note-card
             transparent 8px);
 }
 
+
 .host-note {
     font-family: var(--font-serif);
     font-style: italic;
     color: var(--sun-200);
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.4;
+    padding-bottom: 1rem;
 }
 
 .host-name {
@@ -204,9 +208,9 @@ host-note-card
     font-family: var(--font-serif);
     font-style: italic;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 40px;
     line-height: 1.4;
-
+    margin-bottom: 2rem
 }
 
 .welcome-label {
@@ -215,17 +219,19 @@ host-note-card
     color: var(--neutral-200);
     font-size: 8px;
     letter-spacing: 1px;
+    padding: 5px;
 
 }
 
 .name-note {
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .room-value {
     font-family: var(--font-serif);
-    font-size: 15px;
+    font-size: 20px;
     display: block;
+    padding-top: 2%;
 }
 
 
@@ -256,7 +262,6 @@ host-note-card
         width: 350px;
         top: 0%;
         left: 25%;
-        /*outline: 2px solid red;*/
 
     }
 
@@ -275,8 +280,9 @@ host-note-card
 
     .host-note-card img {
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        width: 39px;
+        top: 2rem;
+        right: 1.8rem;
     }
 
     .attribution {
