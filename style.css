@@ -163,8 +163,10 @@ abbr {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
     background: linear-gradient(150deg, var(--terracotta-700), var(--terracotta-400));
     color: var(--neutral-0);
-
 }
+
+host-note-card
+
 
 .host-note-card::before {
     content: "";
