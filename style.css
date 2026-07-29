@@ -14,7 +14,6 @@ h3 {
 
 .sidebar {
     display: none;
-
 }
 
 .receipt-label {
@@ -234,10 +233,83 @@ abbr {
     padding-top: 2%;
 }
 
+li {
+    background-color: var(--neutral-0);
+    padding: 1.1rem;
+    border-radius: 13px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
 
+ul {
+  list-style: none;
+}
+
+.arrival-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: var(--terracotta-600);
+}
+
+.wifi-label{
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: var(--blue-500);
+}
+
+.breakfast-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 12px;
+
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: var(--rose-500);
+}
+
+.icon-box {
+    width:40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrival-icon {
+  background-color: var(--terracotta-600);
+}
+
+.wifi-icon {
+  background-color: var(--blue-500);
+}
+
+.breakfast-icon {
+  background-color: var(--rose-500);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.card-title{
+    display: flex;
+    gap:5px;
+    align-items: center;
+}
 .attribution {
-    font-size: 0.6875rem;
-    text-align: center;
+    font-size: 1rem;
+    text-align:center;
+    padding-top: 10px;
+    
 }
 
 .attribution a {
@@ -254,6 +326,7 @@ abbr {
 
     .booking-cards {
         position: relative;
+        min-height: 470px;
 
     }
 
@@ -262,6 +335,7 @@ abbr {
         width: 350px;
         top: 0%;
         left: 25%;
+        transform: rotate(-3deg);
 
     }
 
@@ -274,8 +348,9 @@ abbr {
         position: absolute;
         width: 350px;
         top: 0%;
-        right: 33.5%;
+        right: 32.5%;
         z-index: 1;
+        transform: rotate(3deg);
     }
 
     .host-note-card img {
@@ -283,6 +358,12 @@ abbr {
         width: 39px;
         top: 2rem;
         right: 1.8rem;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
     }
 
     .attribution {
