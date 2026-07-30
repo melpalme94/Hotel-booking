@@ -235,13 +235,18 @@ abbr {
 
 li {
     background-color: var(--neutral-0);
-    padding: 1.1rem;
+    padding: 1rem;
     border-radius: 13px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
 }
 
+li h2 {
+    font-size: 24px;
+    margin-bottom: 0.8rem;
+}
+
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 .arrival-label {
@@ -253,7 +258,7 @@ ul {
     color: var(--terracotta-600);
 }
 
-.wifi-label{
+.wifi-label {
     font-family: var(--font-mono);
     text-transform: uppercase;
     font-size: 12px;
@@ -272,8 +277,33 @@ ul {
     color: var(--rose-500);
 }
 
+.arrival-number {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    color: var(--terracotta-600);
+}
+
+.wifi-number {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    color: var(--blue-500);
+}
+
+.wifi-details {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    background-color: var(--neutral-200)
+
+}
+
+.breakfast-number {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    color: var(--rose-500);
+}
+
 .icon-box {
-    width:40px;
+    width: 40px;
     height: 40px;
     border-radius: 8px;
     display: flex;
@@ -282,38 +312,49 @@ ul {
 }
 
 .arrival-icon {
-  background-color: var(--terracotta-600);
+    background-color: var(--terracotta-600);
 }
 
 .wifi-icon {
-  background-color: var(--blue-500);
+    background-color: var(--blue-500);
 }
 
 .breakfast-icon {
-  background-color: var(--rose-500);
+    background-color: var(--rose-500);
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    margin-bottom: 1.5rem;
 }
 
-.card-title{
+.card-detail {
+    color: var(--neutral-600);
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+.card-title {
     display: flex;
-    gap:5px;
+    gap: 5px;
     align-items: center;
 }
+
+
+
 .attribution {
     font-size: 1rem;
-    text-align:center;
+    text-align: center;
     padding-top: 10px;
-    
+
+
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -364,6 +405,7 @@ ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
+
     }
 
     .attribution {
