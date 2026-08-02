@@ -2,6 +2,7 @@ body {
     font-family: var(--font-sans);
     background-color: var(--neutral-50);
     color: var(--neutral-900);
+
 }
 
 h1,
@@ -12,8 +13,96 @@ h3 {
     line-height: 1.1;
 }
 
+main {
+    margin: auto;
+    padding: 1rem;
+}
+
+aside {
+    border-right: 1px solid var(--neutral-400);
+}
+
+.receipt-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px
+}
+
+.booking-status {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--neutral-600);
+    margin-bottom: 10px;
+}
+
+.guest-name {
+    font-style: italic;
+    color: var(--terracotta-600);
+}
+
+.btn-outline {
+    font-family: var(--font-sans);
+    background: none;
+    border: 1px solid var(--neutral-400);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-filled {
+    font-family: avar(--font-sans);
+    background: black;
+    border: 1px solid var(--neutral-400);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: white;
+    cursor: pointer;
+}
+
 .sidebar {
     display: none;
+}
+
+.sidebar header {
+    padding: 1rem;
+    margin-top: 10px;
+    border-bottom: 1px solid var(--neutral-400);
+}
+
+nav a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--neutral-600);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  border-color: var(--neutral-400);
+  border-radius: 10px;
+  background-color: var(--neutral-0);
+  color: black;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1.5rem;
+    margin-top: 10px;
 }
 
 .receipt-label {
@@ -233,14 +322,14 @@ abbr {
     padding-top: 2%;
 }
 
-li {
+.info-card {
     background-color: var(--neutral-0);
     padding: 1rem;
     border-radius: 13px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
 }
 
-li h2 {
+.info-card h2 {
     font-size: 24px;
     margin-bottom: 0.8rem;
 }
@@ -290,10 +379,36 @@ ul {
 }
 
 .wifi-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.wifi-row {
     display: grid;
     grid-template-columns: 1fr auto;
-    background-color: var(--neutral-200)
+    background-color: var(--neutral-200);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+}
 
+.wifi-row-password {
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+}
+
+.copy-button {
+    font-family: var(--font-serif);
+    background: none;
+    border: 1px solid var(--neutral-400);
+    border-radius: 6px;
+    padding: 0.25rem 0.6rem;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--neutral-600);
+    cursor: pointer;
 }
 
 .breakfast-number {
@@ -389,9 +504,10 @@ ul {
         position: absolute;
         width: 350px;
         top: 0%;
-        right: 32.5%;
+        right: 31.5%;
         z-index: 1;
-        transform: rotate(3deg);
+        transform: rotate(4deg);
+        height: 390px;
     }
 
     .host-note-card img {
@@ -401,7 +517,7 @@ ul {
         right: 1.8rem;
     }
 
-    ul {
+    .info-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;

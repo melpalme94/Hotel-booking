@@ -52,15 +52,17 @@
     </footer>
   </aside>
   <!-- Sidebar ends -->
-
   <main>
-    <header>
+    <header class="receipt-header">
       <!-- Main content starts -->
-        <p>Booking · Confirmed</p>
-        <h1>Bienvenue, Lucia.</h1>
-        <button>Print receipt</button>
-        <button>Add to calendar</button>
-     
+        <div>
+          <p class="booking-status">Booking · Confirmed</p>
+          <h1>Bienvenue, <span class="guest-name">Lucia.</span></h1>
+        </div>
+        <div>
+          <button class="btn-outline">Print receipt</button>
+          <button class="btn-filled">Add to calendar</button>
+        </div>
     </header>
     <!-- Booking cards start -->
     <!-- Receipt card -->
@@ -131,8 +133,8 @@
     <!-- Booking cards end -->
     <!-- Guest info row starts -->
     <!-- Arrival -->
-    <ul>
-      <li>
+    <ul class="info-grid">
+      <li class="info-card">
         <div class="card-header">
           <div class="card-title">
             <div class="icon-box arrival-icon">
@@ -150,7 +152,7 @@
         </p>
       </li>
       <!-- Wifi -->
-      <li>
+      <li class="info-card">
         <div class="card-header">
           <div class="card-title">
             <div class="icon-box wifi-icon">
@@ -162,24 +164,27 @@
         </div>
         <h2>Le Soleil · Guest</h2>
         <p class="card-detail">Password below</p>
-        <dl class="wifi-details">
-          <dt>
-            Network
-          </dt>
-          <dd>
-            Le Soleil · Guest
-          </dd>
-          <dt>
-            Password
-          </dt>
-          <dd>
-            soleil-2026
-          </dd>
-        </dl>
-        <button class="copy-button">Copy</button>
+
+        <section class="wifi-details">
+
+          <dl class="wifi-row">
+            <dt>Network</dt>
+            <dd>Le Soleil · Guest</dd>
+          </dl>
+
+          <dl class="wifi-row wifi-row-password ">
+            <dt>Password</dt>
+            <dd>
+              <span>soleil-2026</span>
+              <button class="copy-button">Copy</button>
+            </dd>
+          </dl>
+
+        </section>
+       
       </li>
       <!-- Breakfast -->
-      <li>
+      <li class="info-card">
         <div class="card-header">
           <div class="card-title">
             <div class="icon-box breakfast-icon">
