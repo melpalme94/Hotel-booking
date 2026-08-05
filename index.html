@@ -4,97 +4,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Hotel booking confirmation page</title>
-  <link rel="stylesheet" href="global.css">
-  <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Fraunces:ital,wght@0,400;1,400&display=swap"
     rel="stylesheet">
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Sidebar starts -->
+  <!-- Sidebar -->
   <aside class="sidebar">
-
     <header>
       <a href="#">
         <img src="assets/images/logo.svg" alt="Maison Soleil">
       </a>
-      <button aria-label="Abrir Menu"><img src="assets/images/icon-menu.svg" alt="">
+      <button type="button" aria-label="Abrir Menu">
+        <img src="assets/images/icon-menu.svg" alt="" aria-hidden="true">
       </button>
-
     </header>
 
-    <nav>
-      <ul> <!-- Guest navigation -->
-        <li><a href="#your-stay"><img src="assets/images/icon-bed.svg" alt="">Your stay</a></li>
-        <li><a href="#the-house"><img src="assets/images/icon-house.svg" alt="">The house</a></li>
-        <li><a href="#around-town"><img src="assets/images/icon-pin.svg" alt="">Around town</a></li>
-        <li><a href="#breakfast"><img src="assets/images/icon-breakfast-outline.svg" alt="">Breakfast</a></li>
-        <li><a href="#messages"><img src="assets/images/icon-mail.svg" alt="">Messages</a></li>
+    <nav aria-label="Navegação do hóspede">
+      <ul>
+        <li><a href="#your-stay"><img src="assets/images/icon-bed.svg" alt="" aria-hidden="true">Your stay</a></li>
+        <li><a href="#the-house"><img src="assets/images/icon-house.svg" alt="" aria-hidden="true">The house</a></li>
+        <li><a href="#around-town"><img src="assets/images/icon-pin.svg" alt="" aria-hidden="true">Around town</a></li>
+        <li><a href="#breakfast"><img src="assets/images/icon-breakfast-outline.svg" alt=""
+              aria-hidden="true">Breakfast</a></li>
+        <li><a href="#messages"><img src="assets/images/icon-mail.svg" alt="" aria-hidden="true">Messages</a></li>
       </ul>
     </nav>
-    <!-- Local weather -->
-    <aside>
-      <p>Today in Cassis</p>
-      <span>27°</span>
-      <img src="assets/images/icon-weather.svg" alt="">
-      <p>Sunny · light breeze</p>
-    </aside>
+
+    <!-- Previsão do tempo local -->
+    <div class="card-sun">
+      <p class="sun-cassis">Today in Cassis</p>
+      <span class="temperature">27°</span>
+      <img src="assets/images/icon-weather.svg" alt="" aria-hidden="true">
+      <p class="sun-sunny">Sunny · light breeze</p>
+    </div>
 
     <footer>
-      Est. 1987 Maison Soleil · 12 Rue des Oliviers · Cassis © 2026 Maison Soleil
+      <p class="footer-text">Est. 1987</p> 
+      <p class="footer-text">Maison Soleil · 12 Rue des Oliviers · Cassis</p> 
+      <p class="footer-text">© 2026 Maison Soleil</p>
     </footer>
   </aside>
-  <!-- Sidebar ends -->
+
+  <!-- Conteúdo Principal -->
   <main>
     <header class="receipt-header">
-      <!-- Main content starts -->
-        <div>
-          <p class="booking-status">Booking · Confirmed</p>
-          <h1>Bienvenue, <span class="guest-name">Lucia.</span></h1>
-        </div>
-        <div>
-          <button class="btn-outline">Print receipt</button>
-          <button class="btn-filled">Add to calendar</button>
-        </div>
+      <div>
+        <p class="booking-status">Booking · Confirmed</p>
+        <h1>Bienvenue, <span class="guest-name">Lucia.</span></h1>
+      </div>
+      <div class="header-actions">
+        <button type="button" class="btn-outline">Print receipt</button>
+        <button type="button" class="btn-filled">Add to calendar</button>
+      </div>
     </header>
-    <!-- Booking cards start -->
-    <!-- Receipt card -->
-    <section class="booking-cards">
+
+    <!-- Seção de Cartões da Reserva -->
+    <section class="booking-cards" aria-label="Detalhes da Reserva">
+      <!-- Nota do Anfitrião -->
       <article class="host-note-card">
-      
-          <h2 class="welcome-label">Welcome card</h2>
-    
-        <img src="assets/images/icon-sun.svg" alt="" srcset="">
+        <h2 class="welcome-label">Welcome card</h2>
+        <img src="assets/images/icon-sun.svg" alt="" aria-hidden="true">
         <p class="name-note">
           <span class="host-note">A note from your host, </span>
           <span class="host-name">Margaux.</span>
         </p>
         <p class="notice-note">
           We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending
-          not
-          to
-          notice you.
+          not to notice you.
         </p>
         <dl>
           <dt class="welcome-label">Room</dt>
           <dd class="room-value">La Garrigue</dd>
         </dl>
       </article>
+
+      <!-- Recibo -->
       <article class="receipt-card">
         <div class="receipt-header">
           <h2 class="receipt-label">Receipt</h2>
           <p class="receipt-number">
-            <span class="number-line1"><abbr title="numero">№</abbr> MS-2026</span>
+            <span class="number-line1"><abbr title="Número">№</abbr> MS-2026</span>
             <span class="number-line2">0421-AH</span>
           </p>
         </div>
+
         <h3>Your stay</h3>
         <dl class="stay-dates">
           <dt class="receipt-label">Check in</dt>
@@ -120,25 +124,21 @@
           <dd class="receipt-730">€ 730.40</dd>
         </dl>
 
-        <div class="receipt-footer">
+        <footer class="receipt-footer">
           <p class="payment-status">Paid · Wise · GBP</p>
-          <img src="assets/images/icon-barcode.svg" alt="">
-        </div>
-
+          <img src="assets/images/icon-barcode.svg" alt="Barcode do recibo">
+        </footer>
       </article>
-      <!-- Barcode image -->
-      <!-- Note from host card -->
-
     </section>
-    <!-- Booking cards end -->
-    <!-- Guest info row starts -->
-    <!-- Arrival -->
+
+    <!-- Grid de Informações -->
     <ul class="info-grid">
+      <!-- Arrival -->
       <li class="info-card">
         <div class="card-header">
           <div class="card-title">
             <div class="icon-box arrival-icon">
-              <img src="assets/images/icon-key.svg" alt="">
+              <img src="assets/images/icon-key.svg" alt="" aria-hidden="true">
             </div>
             <p class="arrival-label">Arrival</p>
           </div>
@@ -151,12 +151,13 @@
           tree.
         </p>
       </li>
+
       <!-- Wifi -->
       <li class="info-card">
         <div class="card-header">
           <div class="card-title">
             <div class="icon-box wifi-icon">
-              <img src="assets/images/icon-wifi.svg" alt="">
+              <img src="assets/images/icon-wifi.svg" alt="" aria-hidden="true">
             </div>
             <p class="wifi-label">Wifi</p>
           </div>
@@ -165,34 +166,30 @@
         <h2>Le Soleil · Guest</h2>
         <p class="card-detail">Password below</p>
 
-        <section class="wifi-details">
-
-          <dl class="wifi-row">
+        <dl class="wifi-details">
+          <div class="wifi-row">
             <dt>Network</dt>
             <dd>Le Soleil · Guest</dd>
-          </dl>
-
-          <dl class="wifi-row wifi-row-password ">
+          </div>
+          <div class="wifi-row wifi-row-password">
             <dt>Password</dt>
             <dd>
               <span>soleil-2026</span>
-              <button class="copy-button">Copy</button>
+              <button type="button" class="copy-button">Copy</button>
             </dd>
-          </dl>
-
-        </section>
-       
+          </div>
+        </dl>
       </li>
+
       <!-- Breakfast -->
       <li class="info-card">
         <div class="card-header">
           <div class="card-title">
             <div class="icon-box breakfast-icon">
-              <img src="assets/images/icon-breakfast.svg" alt="">
+              <img src="assets/images/icon-breakfast.svg" alt="" aria-hidden="true">
             </div>
             <p class="breakfast-label">Breakfast</p>
           </div>
-
           <span class="breakfast-number">03</span>
         </div>
         <h2>Served 8 - 10:30</h2>
@@ -200,16 +197,17 @@
         <p>
           Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before.
         </p>
-        <!-- Guest info row ends -->
       </li>
-      <!-- Main content ends -->
     </ul>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        rel="noopener noreferrer">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/melpalme94/Hotel-booking" target="_blank" rel="noopener noreferrer">Ivan
+        Palmegiano</a>.
+    </footer>
   </main>
 
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/melpalme94/Hotel-booking">Ivan Palmegiano</a>.
-  </footer>
 </body>
 
 </html>
