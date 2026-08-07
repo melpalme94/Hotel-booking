@@ -1,9 +1,12 @@
+/* ==========================================================================
+   1. RESET / BASE
+   ========================================================================== */
+
 body {
     font-family: var(--font-sans);
     background-color: var(--neutral-50);
     color: var(--neutral-900);
     margin: 0;
-
 }
 
 h1,
@@ -15,6 +18,19 @@ h3 {
     margin-top: 0;
 }
 
+ul {
+    list-style: none;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   2. LAYOUT ESTRUTURAL (main, aside, sidebar)
+   ========================================================================== */
+
 main {
     padding: 0.5rem;
 }
@@ -23,10 +39,120 @@ aside {
     border-right: 1px solid var(--neutral-400);
 }
 
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar header {
+    padding: 1rem;
+    margin-top: 10px;
+    border-bottom: 1px solid var(--neutral-400);
+}
+
+aside footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-top: 1px dashed var(--neutral-400);
+}
+
+.footer-text {
+    font-size: 13px;
+    color: var(--neutral-600);
+    line-height: 1.5;
+}
+
+
+/* ==========================================================================
+   3. NAVEGAÇÃO (sidebar nav)
+   ========================================================================== */
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1.5rem;
+    margin-top: 10px;
+}
+
+nav a {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--neutral-600);
+    padding: 0.5rem 0.75rem;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    border-color: var(--neutral-400);
+    border-radius: 10px;
+    background-color: var(--neutral-0);
+    color: black;
+}
+
+
+/* ==========================================================================
+   4. CARD DO CLIMA (.card-sun)
+   ========================================================================== */
+
+.card-sun {
+    position: relative;
+    background-color: var(--sun-300);
+    border-radius: 13px;
+    padding: 1.5rem;
+    margin: 1rem;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.card-sun img {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 80px;
+}
+
+.temperature {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.sun-cassis {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-top: -1rem;
+    letter-spacing: 1px;
+    color: var(--neutral-600);
+}
+
+.sun-sunny {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-bottom: -1rem;
+    letter-spacing: 1px;
+    color: var(--neutral-600);
+}
+
+
+/* ==========================================================================
+   5. HEADER PRINCIPAL (booking status, botões)
+   ========================================================================== */
+
 .receipt-header {
     display: flex;
     justify-content: space-between;
-    padding: 10px
+    padding: 10px;
 }
 
 .booking-status {
@@ -57,7 +183,7 @@ aside {
 }
 
 .btn-filled {
-    font-family: avar(--font-sans);
+    font-family: var(--font-sans);
     background: black;
     border: 1px solid var(--neutral-400);
     border-radius: 25px;
@@ -69,100 +195,22 @@ aside {
     cursor: pointer;
 }
 
-.sidebar {
-    display: none;
-}
 
-.sidebar header {
-    padding: 1rem;
-    margin-top: 10px;
-    border-bottom: 1px solid var(--neutral-400);
-}
+/* ==========================================================================
+   6. RECEIPT CARD
+   ========================================================================== */
 
-nav a {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    text-decoration: none;
-    font-size: 14px;
-    color: var(--neutral-600);
-    padding: 0.5rem 0.75rem;
-    border: 1px solid transparent;
-    transition: all 0.2s ease;
-}
-
-nav a:hover {
-    border-color: var(--neutral-400);
-    border-radius: 10px;
+.receipt-card {
+    width: 350px;
     background-color: var(--neutral-0);
-    color: black;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 1.5rem;
-    margin-top: 10px;
-}
-
-.card-sun {
-    position: relative;
-    background-color: var(--sun-300);
+    padding: 1.1rem;
     border-radius: 13px;
-    padding: 1.5rem;
-    margin: 1rem;
-    overflow: hidden;
-    margin-top: 350px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
 }
 
-.card-sun img {
-    position: absolute;
-    top: -1rem;
-    right: -1rem;
-    width: 80px;
-}
-
-.temperature {
-    font-family: var(--font-serif);
-    font-size: 32px;
-    display: block;
-    padding-top: 0.5rem;
+.receipt-card h3 {
+    border-bottom: 1px dashed var(--neutral-200);
     padding-bottom: 0.5rem;
-}
-
-.sun-cassis {
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    font-size: 10px;
-    margin-top: -1rem;
-    letter-spacing: 1px;
-    color: var(--neutral-600);
-}
-
-.sun-sunny {
-
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    font-size: 10px;
-    margin-bottom: -1rem;
-    letter-spacing: 1px;
-    color: var(--neutral-600);
-}
-
-
-aside footer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
-    border-top: 1px dashed var(--neutral-400);
-}
-
-.footer-text {
-    font-size: 13px;
-    color: var(--neutral-600);
-    line-height: 1.5;
 }
 
 .receipt-label {
@@ -177,22 +225,15 @@ dt .receipt-label {
     padding: 1.1rem;
 }
 
-.receipt-730 {
-    margin-top: 2rem;
+.receipt-number {
+    font-family: var(--font-mono);
+    text-align: right;
 }
 
-.receipt-card {
-    width: 350px;
-    background-color: var(--neutral-0);
-    padding: 1.1rem;
-    border-radius: 13px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
-    /*deslocamento-horizontal deslocamento-vertical desfoque cor*/
-}
-
-.receipt-card h3 {
-    border-bottom: 1px dashed var(--neutral-200);
-    padding-bottom: 0.5rem;
+.number-line1,
+.number-line2 {
+    display: block;
+    font-size: 12px;
 }
 
 .receipt-card .stay-dates {
@@ -208,10 +249,23 @@ dt .receipt-label {
     padding-top: 1rem;
 }
 
-.pricing dd {
-    font-family: var(--font-mono);
-    text-align: right;
-    font-size: 12px
+.stay-dates> :nth-child(-n+2) {
+    border-right: 1px dashed var(--neutral-200);
+    padding-right: 0.5rem;
+}
+
+.date-value {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-family: var(--font-serif);
+}
+
+.date-detail {
+    display: block;
+    font-size: 12px;
+    color: var(--neutral-600);
+    padding-top: 0.1rem;
 }
 
 .pricing {
@@ -223,60 +277,18 @@ dt .receipt-label {
     margin-top: 0.5rem;
 }
 
+.pricing dd {
+    font-family: var(--font-mono);
+    text-align: right;
+    font-size: 12px;
+}
+
 .pricing dd:last-child {
     font-family: var(--font-serif);
     font-size: 22px;
     margin: 0;
     border-top: 2px solid var(--neutral-400);
     padding-top: 0.5rem;
-}
-
-.stay-dates> :nth-child(-n+2) {
-    border-right: 1px dashed var(--neutral-200);
-    padding-right: 0.5rem;
-}
-
-.date-value {
-    display: block;
-    text-align: center;
-    font-size: 24px;
-
-}
-
-.date-detail {
-    display: block;
-    font-size: 12px;
-    color: var(--neutral-600);
-    padding-top: 0.1rem;
-}
-
-.receipt-number {
-    font-family: var(--font-mono);
-    text-align: right;
-}
-
-.number-line1 {
-    display: block;
-    font-size: 12px;
-
-}
-
-abbr {
-    text-decoration: none
-}
-
-.number-line2 {
-    display: block;
-    font-size: 12px;
-
-}
-
-.date-value {
-    font-family: var(--font-serif);
-}
-
-.pricing dd {
-    font-family: var(--font-mono);
 }
 
 .pricing dt:last-of-type {
@@ -288,13 +300,16 @@ abbr {
     color: var(--neutral-600);
 }
 
+.receipt-730 {
+    margin-top: 2rem;
+}
+
 .payment-status {
     font-family: var(--font-mono);
     text-transform: uppercase;
     color: var(--neutral-600);
     font-size: 8.5px;
     letter-spacing: 1px;
-
 }
 
 .receipt-footer {
@@ -304,6 +319,11 @@ abbr {
     margin-top: 0.8rem;
 }
 
+
+/* ==========================================================================
+   7. HOST NOTE CARD
+   ========================================================================== */
+
 .host-note-card {
     width: 350px;
     padding: 1.5rem;
@@ -311,24 +331,16 @@ abbr {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
     background: linear-gradient(50deg, var(--terracotta-700), var(--terracotta-400));
     color: var(--neutral-0);
-
-}
-
-.notice-note {
-    margin-bottom: 2rem;
-
 }
 
 .host-note-card::before {
     content: "";
     position: absolute;
     top: 1.1rem;
-    /* ajuste depois */
     left: 1.1rem;
     right: 1.1rem;
     height: 1px;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.6), transparent);
-
     -webkit-mask-image: repeating-linear-gradient(to right,
             black 0px,
             black 4px,
@@ -341,6 +353,18 @@ abbr {
             transparent 8px);
 }
 
+.welcome-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    color: var(--neutral-200);
+    font-size: 8px;
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
+.name-note {
+    margin-top: 4rem;
+}
 
 .host-note {
     font-family: var(--font-serif);
@@ -358,21 +382,11 @@ abbr {
     font-weight: 500;
     font-size: 40px;
     line-height: 1.4;
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 }
 
-.welcome-label {
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    color: var(--neutral-200);
-    font-size: 8px;
-    letter-spacing: 1px;
-    padding: 5px;
-
-}
-
-.name-note {
-    margin-top: 4rem;
+.notice-note {
+    margin-bottom: 2rem;
 }
 
 .room-value {
@@ -382,8 +396,13 @@ abbr {
     padding-top: 2%;
 }
 
+
+/* ==========================================================================
+   8. INFO GRID (Arrival / Wifi / Breakfast)
+   ========================================================================== */
+
 .info-grid {
-    margin : 0 auto;
+    margin: 0 auto;
     max-width: 1200px;
 }
 
@@ -393,7 +412,6 @@ abbr {
     margin: 1rem;
     border-radius: 13px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
-
 }
 
 .info-card h2 {
@@ -401,8 +419,44 @@ abbr {
     margin-bottom: 0.5rem;
 }
 
-ul {
-    list-style: none;
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.card-detail {
+    color: var(--neutral-600);
+    font-size: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrival-icon {
+    background-color: var(--terracotta-600);
+}
+
+.wifi-icon {
+    background-color: var(--blue-500);
+}
+
+.breakfast-icon {
+    background-color: var(--rose-500);
 }
 
 .arrival-label {
@@ -427,7 +481,6 @@ ul {
     font-family: var(--font-mono);
     text-transform: uppercase;
     font-size: 12px;
-
     font-weight: bolder;
     letter-spacing: 1px;
     color: var(--rose-500);
@@ -445,11 +498,16 @@ ul {
     color: var(--blue-500);
 }
 
+.breakfast-number {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    color: var(--rose-500);
+}
+
 .wifi-details {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-
 }
 
 .wifi-row {
@@ -478,60 +536,16 @@ ul {
     cursor: pointer;
 }
 
-.breakfast-number {
-    font-family: var(--font-serif);
-    font-size: 24px;
-    color: var(--rose-500);
-}
 
-.icon-box {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.arrival-icon {
-    background-color: var(--terracotta-600);
-}
-
-.wifi-icon {
-    background-color: var(--blue-500);
-}
-
-.breakfast-icon {
-    background-color: var(--rose-500);
-}
-
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.card-detail {
-    color: var(--neutral-600);
-    font-size: 12px;
-    margin-bottom: 0.5rem;
-}
-
-.card-title {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-
-
+/* ==========================================================================
+   9. RODAPÉ DA PÁGINA (attribution)
+   ========================================================================== */
 
 .attribution {
     display: block;
     font-size: 12px;
     text-align: center;
     padding-top: 15px;
-
 }
 
 .attribution a {
@@ -539,11 +553,14 @@ ul {
     text-decoration: none;
 }
 
+
 /* ==========================================================================
-   Media Queries (Desktop / Tablet)
+   10. MEDIA QUERIES (Desktop / Tablet — a partir de 768px)
    ========================================================================== */
 
 @media (min-width: 768px) {
+
+    /* --- Layout geral --- */
     body {
         display: grid;
         grid-template-columns: 280px 1fr;
@@ -555,25 +572,30 @@ ul {
         flex-direction: column;
     }
 
+    /* --- Receipt card + Host note card (sobrepostos) --- */
     .booking-cards {
         position: relative;
         display: block;
         height: 450px;
-        margin: 3rem 0;
+        margin: 1.5rem 0;
+        --card-w: clamp(160px, 30vw, 350px);
+        --card-left: clamp(10px, 27.7vw, 450px);
     }
 
     .receipt-card {
-        margin:auto;
+        margin: auto;
         position: absolute;
         top: 0;
-        left: 450px;
+        width: var(--card-w);
+        left: var(--card-left);
         transform: rotate(-3deg);
     }
 
     .host-note-card {
         position: absolute;
         top: 0;
-        left: 795px;
+        width: var(--card-w);
+        left: calc(var(--card-left) + var(--card-w) - 5px);
         z-index: 1;
         transform: rotate(4deg);
         height: 390px;
@@ -586,13 +608,13 @@ ul {
         right: 1.8rem;
     }
 
+    /* --- Info grid --- */
     .info-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         margin: 0 auto;
     }
-
 
     .attribution {
         grid-column: 2 / -1;
