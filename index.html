@@ -18,17 +18,24 @@
 </head>
 
 <body>
+  <!-- Topbar (sempre visível) -->
+  <header class="topbar">
+    <a href="#">
+      <img src="assets/images/logo.svg" alt="Maison Soleil">
+    </a>
+    <button type="button" id="menu-toggle" aria-label="Abrir Menu">
+      <img src="assets/images/icon-menu.svg" alt="" aria-hidden="true" id="menu-icon">
+    </button>
+  </header>
 
   <!-- Sidebar -->
   <aside class="sidebar">
-    <header>
+    
+    <div class="sidebar-logo">
       <a href="#">
         <img src="assets/images/logo.svg" alt="Maison Soleil">
       </a>
-      <button type="button" aria-label="Abrir Menu">
-        <img src="assets/images/icon-menu.svg" alt="" aria-hidden="true">
-      </button>
-    </header>
+    </div>
 
     <nav aria-label="Navegação do hóspede">
       <ul>
@@ -206,7 +213,7 @@
         Palmegiano</a>.
     </footer>
   </main>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
